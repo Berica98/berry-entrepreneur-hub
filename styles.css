@@ -1,0 +1,258 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    background: url('images/hero.jpg') no-repeat center center/cover;
+    text-align: center;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5); /* Shadow effect */
+}
+
+/* Dark overlay */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    z-index: 1;
+}
+
+.hero h1, .hero p, .hero button {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    letter-spacing: 3px; /* More spacing for modern feel */
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.hero button {
+    background-color: #f4b41a;
+    color: #fff;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hero button:hover {
+    background-color: #e6a219;
+}
+
+/* About Section */
+#about {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+#about .content {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#about img {
+    width: 300px;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+/* Services Section */
+#services {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.service-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.service {
+    max-width: 300px;
+    margin: 20px;
+    text-align: center;
+}
+
+.service img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+/* Networking Section */
+#networking {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+#networking .networking-container {
+    display: flex;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    justify-content: center;
+    gap: 20px;
+}
+
+#networking img {
+    max-width: 100%; /* Ensures the images scale down as the container shrinks */
+    height: auto;
+    object-fit: cover; /* Ensures the images maintain aspect ratio */
+    border-radius: 10px; /* Adds some design flair with rounded corners */
+}
+
+/* Responsive adjustments for smaller devices */
+@media (max-width: 768px) {
+    #networking .networking-container {
+        flex-direction: column; /* Stacks the images vertically on small devices */
+    }
+
+    #networking img {
+        width: 90%; /* Shrink the image width to fit within mobile view */
+        margin: 0 auto; /* Center the image */
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    #networking .networking-container {
+        flex-direction: row; /* Side by side for tablets */
+        justify-content: space-between;
+    }
+
+    #networking img {
+        width: 45%; /* Ensure images fit side by side on tablet screens */
+    }
+}
+
+/* Contact Section */
+#contact {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer ul {
+    padding: 0;
+    list-style: none;
+}
+
+footer ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+footer ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.social-media {
+    margin-top: 10px;
+}
+
+.social-media ul {
+    padding: 0;
+    list-style: none;
+}
+
+.social-media ul li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.social-media ul li a {
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .hero button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    .service-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (min-width: 768px)
+
+/* Social Media Styling */
+.social-media {
+    margin-top: 10px;
+}
+
+.social-media ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.social-media ul li {
+    margin: 0 10px;
+}
+
+.social-media ul li a {
+    color: white;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-media ul li a:hover {
+    color: #f4b41a; /* Hover color */
+}
